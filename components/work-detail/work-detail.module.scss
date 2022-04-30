@@ -1,0 +1,54 @@
+.detail_container {
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 3.125rem;
+    font-weight: 600;
+  }
+
+  @media (min-width: 1150px) {
+    width: 85%;
+    padding-bottom: 12.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    section {
+      width: 45%;
+    }
+  }
+}
+
+.marketplaces {
+  display: flex;
+  margin: 0 auto 3.125rem;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+
+  a {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    p {
+      font-size: 0.65rem;
+    }
+    h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.marketplaces a:not(:last-child) {
+  border-right: 1px solid #cacaca;
+}
+
+.info {
+  color: #1f1f1f;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  margin-bottom: 4.375rem;
+}

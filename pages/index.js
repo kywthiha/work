@@ -6,11 +6,6 @@ import Layout from "../components/layout";
 import Work from "../components/work";
 
 const Index = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(startClock());
-  }, [dispatch]);
-
   return (
     <Layout>
       <Work />

@@ -126,6 +126,8 @@
   height: 1.5rem;
   gap: 0.5rem;
   justify-content: center;
+  position: relative;
+  z-index: 20;
 
   & > div {
     background-color: white;
@@ -137,8 +139,6 @@
 }
 
 .open_active {
-  position: relative;
-  z-index: 20;
   div {
     opacity: 0;
   }
