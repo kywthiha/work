@@ -1,5 +1,5 @@
-import Layout from "../components/layout";
-import Work from "../components/work-list/work";
+import Layout from "../../components/layout";
+import Work from "../../components/work-list/work";
 
 const Index = ({ legends, workItems, categories }) => {
   return (
