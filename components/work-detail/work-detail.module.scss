@@ -1,9 +1,6 @@
 .detail_container {
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 3.125rem;
-    font-weight: 600;
-  }
+  margin: 0 auto;
+  width: 90%;
 
   @media (min-width: 1150px) {
     width: 85%;
@@ -16,6 +13,25 @@
     section {
       width: 45%;
     }
+  }
+}
+.web_title {
+  display: none;
+  font-size: 4rem;
+  margin-bottom: 3.125rem;
+  font-weight: 600;
+  @media (min-width: 1150px) {
+    display: block;
+  }
+}
+.mobile_title {
+  font-size: 2rem;
+  padding: 3.125rem 0;
+  font-weight: 600;
+  width: 100%;
+  margin: auto;
+  @media (min-width: 1150px) {
+    display: none;
   }
 }
 
@@ -51,4 +67,188 @@
   font-size: 1rem;
   line-height: 1.625rem;
   margin-bottom: 4.375rem;
+}
+
+.key_feature_container {
+  @media (min-width: 1150px) {
+    display: flex;
+    gap: 1.5rem;
+  }
+  h5 {
+    font-weight: 500;
+
+    @media (max-width: 1150px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  ul {
+    list-style-type: none;
+    @media (min-width: 1150px) {
+      padding-left: 1.5rem;
+      border-left: 1px solid #dad6da;
+    }
+  }
+}
+
+.slider_container {
+  width: 80vw;
+  height: 80vw;
+
+  position: relative;
+
+  @media (min-width: 640px) {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  span {
+    overflow: visible !important;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: #72d2cc;
+    border-radius: 50%;
+    display: block;
+    animation: blob-popup 0.8s cubic-bezier(0.52, 0.2, 0.415, 1.32) backwards;
+
+    @keyframes blob-popup {
+      0% {
+        transform: scale3d(0, 0, 1);
+        border-radius: 43% 57% 56% 44%/55% 40% 60% 45%;
+      }
+      5% {
+        transform: scale3d(0, 0, 1);
+      }
+      30% {
+        border-radius: 43% 57% 47% 53%/46% 46% 54% 54%;
+      }
+      70% {
+        border-radius: 49% 51% 43% 57%/55% 48% 52% 45%;
+      }
+      to {
+        transform: scaleX(1);
+        border-radius: 50% 50% 50% 50%/50% 50% 50% 50%;
+      }
+    }
+  }
+}
+
+.slider_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: 1150px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.indicator {
+  margin-top: 3rem;
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.1rem;
+    li {
+      cursor: pointer;
+      width: 10px;
+      height: 10px;
+      margin: 0 6px;
+      background: #cacaca;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+.indicator_active {
+  background: #d5333e !important;
+}
+
+.slide {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.25);
+  transition: opacity 0.7s ease 0s, visibility 0.7s ease 0s;
+  animation: image-fade-in 1.7s cubic-bezier(0.2, 1, 0.2, 1) 0.7s backwards;
+  @keyframes image-fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(1.25) translateY(50px);
+    }
+    10% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: scale(1.25) translateY(0);
+    }
+  }
+}
+
+.active_slide {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.7s;
+}
+
+.work_pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  @media (min-width: 1150px) {
+    width: 100%;
+    position: absolute;
+    top: 45vh;
+  }
+
+  a {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1.875rem;
+    border-radius: 50%;
+    background: #e43333 url(/image/arrow-white.svg) no-repeat 50%;
+    background-size: 12px 9px;
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 10%);
+    transition: box-shadow 0.5s;
+
+    @media (min-width: 1150px) {
+      width: 8rem;
+      height: 8rem;
+      background-position: 30% 50%;
+      transition: transform 0.25s cubic-bezier(0.7, 0.21, 0.54, 1.38),
+        box-shadow 0.5s;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    margin-top: 4rem;
+  }
+}
+
+.work_pagination a:first-child {
+  transform: rotateY(180deg);
+  @media (min-width: 1150px) {
+    transform: rotateY(180deg) scale(0.8);
+    margin-left: -4rem;
+    &:hover {
+      transform: rotateY(180deg) scale(110%);
+    }
+  }
+}
+
+.work_pagination a:last-child {
+  @media (min-width: 1150px) {
+    transform: scale(0.8);
+    margin-right: -4rem;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
 }
