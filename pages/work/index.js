@@ -1,5 +1,6 @@
-import Layout from "../components/layout";
-import Work from "../components/work";
+import Layout from "../../components/layout";
+import Work from "../../components/work";
+
 
 const Index = () => {
   return (
