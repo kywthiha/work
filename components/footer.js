@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./footer.module.scss";
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="let_chat">
       <h4 className={styles.title}>Let's have a chat</h4>
       <div className={styles.item_container}>
         <section>

@@ -26,26 +26,56 @@ const Header = () => {
           className={`${menOpen && styles.open_active_ul} ${styles.mobile_nav}`}
         >
           <ul>
-            <li className={styles.active_link}>
+            <li
+              className={styles.active_link}
+              onClick={(e) => {
+                setMenuOpen(false);
+              }}
+            >
               <Link href="/">Work</Link>
             </li>
-            <li>
+            <li
+              onClick={(e) => {
+                setMenuOpen(false);
+              }}
+            >
               <Link href="/">Solutions</Link>
             </li>
-            <li>
+            <li
+              onClick={(e) => {
+                setMenuOpen(false);
+              }}
+            >
               <Link href="/">Services</Link>
             </li>
-            <li>
+            <li
+              onClick={(e) => {
+                setMenuOpen(false);
+              }}
+            >
               <Link href="/">About us</Link>
             </li>
-            <li>
+            <li
+              onClick={(e) => {
+                setMenuOpen(false);
+              }}
+            >
               <Link href="/">Blog</Link>
             </li>
-            <li>
+            <li
+              onClick={(e) => {
+                setMenuOpen(false);
+              }}
+            >
               <button>Request a quote</button>
             </li>
-            <li className={styles.let_chat}>
-              <Link href="/">Let's chat</Link>
+            <li
+              className={styles.let_chat}
+              onClick={(e) => {
+                setMenuOpen(false);
+              }}
+            >
+              <Link href="#let_chat">Let's chat</Link>
             </li>
           </ul>
           <div className={styles.media_icon}>

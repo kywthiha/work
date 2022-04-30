@@ -4,7 +4,7 @@ import styles from "./work_item.module.scss";
 const WorkItem = ({ work }) => {
  
   return (
-    <Link href="/work-detail">
+    <Link href="/work/item">
       <div
         className={`${styles.item_container} ${
           work.span2 && styles.item_col_span_2
